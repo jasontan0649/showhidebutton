@@ -1,0 +1,38 @@
+<html>
+<head>
+<style type="text/css"> 
+#showhide {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: inherit;
+  }
+</style>
+<title>Show hide button demo</title>
+</head>
+<body>
+Password:<input type="password" name="password" id="password" />
+<button type="button" id="showhide">
+<img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" /></button><br />
+<script>
+    function show() {
+        var p = document.getElementById('password');
+        p.setAttribute('type', 'text');
+    }
+    function hide() {
+        var p = document.getElementById('password');
+        p.setAttribute('type', 'password');
+    }
+    var pwShown = 0;
+    document.getElementById("showhide").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
+        }
+    }, false);
+</script>
+</body>
+</html>
